@@ -13,6 +13,15 @@ class MainActivity :AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.displayResult
+        binding.addHeight
+        binding.addWeight
+
+        binding.buttonCalculate.setOnClickListener{
+            binding.displayResult.text = "Your value BMI:"
+        }
+
+
+
     }
     /*
     1. Przeczytać o viewBinding
