@@ -17,7 +17,7 @@ class MainActivity :AppCompatActivity() {
         binding.addWeight
 
         binding.buttonCalculate.setOnClickListener{
-            binding.displayResult.text = "Your value BMI:"
+            binding.displayResult.text = "Your BMI value:"
         }
 
 
