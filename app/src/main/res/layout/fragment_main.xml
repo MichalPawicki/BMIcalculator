@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,9 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Podaj wzrost"
+        android:hint="@string/Podaj_wzrost"
+        android:hintTextColor="#757575"
         android:inputType="numberDecimal"
-        android:text="" />
+        android:minHeight="48dp"
+        android:text=""
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/addWeight"
@@ -20,8 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Podaj wagę"
+        android:hint="@string/Podaj_wage"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
         android:text="" />
 
     <Button
@@ -29,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Oblicz"
+        android:text="@string/Button_oblicz"
         android:onClick="calculate"/>
 
     <TextView
