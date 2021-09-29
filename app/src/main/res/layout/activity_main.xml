@@ -3,54 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/addHeight"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/Podaj_wzrost"
-        android:hintTextColor="#757575"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:text=""
-        tools:ignore="TextContrastCheck" />
+        android:layout_height="match_parent"
 
-    <EditText
-        android:id="@+id/addWeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/Podaj_wage"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:text="" />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
-    <Button
-        android:id="@+id/buttonCalculate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/Button_oblicz"
-        android:onClick="calculate"/>
-
-    <TextView
-        android:id="@+id/displayResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:text="" />
-    <TextView
-        android:id="@+id/bmiInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:text="" />
 </LinearLayout>
