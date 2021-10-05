@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_fragmentMain_to_fragmentResult"
             app:destination="@id/fragmentResult" />
+        <argument
+            android:name="calculationsBmi"
+            app:argType="float" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_result"
