@@ -1,15 +1,20 @@
 package michal.pawicki.bmicalculator
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import michal.pawicki.bmicalculator.databinding.ActivityMainBinding
 import michal.pawicki.bmicalculator.databinding.FragmentMainBinding
+import michal.pawicki.bmicalculator.databinding.FragmentResultBinding
 import michal.pawicki.bmicalculator.databinding.FragmentSplashBinding
+import org.w3c.dom.Text
 
 class FragmentMain : Fragment() {
 
@@ -40,31 +45,13 @@ class FragmentMain : Fragment() {
                 return@setOnClickListener
             }
             val bmi = calculateBmi(height, weight)
-//            binding.textview.text = "Twoja wartość BMI wynosi: $bmi"
-//            binding.bmiInfo.text = bmiInfo(bmi)
+            val action = FragmentMainDirections.actionFragmentMainToFragmentResult(bmi.toString())
+
+            findNavController().navigate(action)
         }
 
     }
 
     private fun calculateBmi (height: Float, weight: Float) = weight/(height*height)
 
-    private fun bmiInfo (bmi: Float): String {
-        return when (bmi) {
-            in 0f..15.99f -> "Wychudzenie!! Zyjesz jeszcze? :)"
-            in 16f..17.99f -> "Wygłodzenie - czas by odwiedzić babcię!! "
-            in 18f..18.49f -> "Niedowaga - jeden obiadek więcej nie zaszkodzi "
-            in 18.5f..24.99f -> "Wszystko w normie! Tak trzymaj!!"
-            in 25f..29.99f -> "Nadwaga! Teraz obiadek mniej!"
-            in 30f..34.99f -> "Otyłość! Wypada pomyśleć nad dietą"
-            else -> "Otyłość klinicza!! Caasu udać się do lekarza!!!"
-        }
-
-            findNavController().navigate(R.id.action_fragmentMain_to_fragmentResult)
-        }
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        fragmentMain = null
-    }
-}

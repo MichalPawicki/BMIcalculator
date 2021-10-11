@@ -8,11 +8,20 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewFragResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="44sp"
         android:text="Przykład"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:id="@+id/bmiInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="44sp"
+        android:text=""
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"/>
 

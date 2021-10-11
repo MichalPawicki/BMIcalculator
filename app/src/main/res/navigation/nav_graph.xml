@@ -22,13 +22,14 @@
         <action
             android:id="@+id/action_fragmentMain_to_fragmentResult"
             app:destination="@id/fragmentResult" />
-        <argument
-            android:name="calculationsBmi"
-            app:argType="float" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_result"
         android:id="@+id/fragmentResult"
         android:name="michal.pawicki.bmicalculator.FragmentResult"
-        android:label="FragmentResult" />
+        android:label="FragmentResult" >
+        <argument
+            android:name="textargs"
+            app:argType="string" />
+    </fragment>
 </navigation>
