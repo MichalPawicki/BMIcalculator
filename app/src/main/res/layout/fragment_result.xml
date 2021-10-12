@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/purple_200"
+    android:background="@color/light_blue_600"
     android:orientation="vertical">
 
 
@@ -11,8 +11,8 @@
         android:id="@+id/textViewFragResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="44sp"
-        android:text="Przykład"
+        android:textSize="30sp"
+        android:text=""
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"/>
 
@@ -20,8 +20,9 @@
         android:id="@+id/bmiInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="44sp"
+        android:textSize="30sp"
         android:text=""
+        android:layout_marginTop="10dp"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-black"/>
 
