@@ -30,7 +30,7 @@ class FragmentResult : Fragment (R.layout.fragment_result) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textViewFragResult.text = "Twoja wartość BMI wynosi: ${args.textargs}"
+        binding.textViewFragResult.text = "Twoje BMI wynosi: ${args.textargs}"
 
         val bmi = args.textargs
         binding.bmiInfo.text = bmiInfo(bmi)
