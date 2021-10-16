@@ -29,6 +29,9 @@ class FragmentSplash : Fragment() {
         binding.avatarEnter.setOnClickListener {
           findNavController().navigate(R.id.action_fragmentSplash_to_fragmentMain)
         }
+        binding.start.setOnClickListener {
+          findNavController().navigate(R.id.action_fragmentSplash_to_fragmentMain)
+        }
     }
 
     override fun onDestroyView() {

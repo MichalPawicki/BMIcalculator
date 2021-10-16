@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/light_blue_A200"
-    android:padding="16dp">
+    android:background="@color/light_blue_A200">
 
 
     <EditText
         android:id="@+id/addHeight"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/Podaj_wzrost"
@@ -18,28 +18,64 @@
         android:minHeight="48dp"
         android:text=""
         android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageHeight"
+        app:layout_constraintTop_toTopOf="@+id/imageHeight"
         tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/addWeight"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/Podaj_wage"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:text=""
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageWeight"
+        app:layout_constraintTop_toBottomOf="@+id/imageHeight" />
 
     <Button
         android:id="@+id/buttonCalculate"
-        android:layout_width="match_parent"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:background="@color/purple_700"
         android:onClick="calculate"
-        android:text="@string/Button_oblicz" />
+        android:text="@string/Button_oblicz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <ImageView
+        android:id="@+id/imageHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/height" />
+
+    <ImageView
+        android:id="@+id/imageWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHeight"
+        app:srcCompat="@drawable/weight" />
+
+    <ImageView
+        android:id="@+id/imageGym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
+        app:srcCompat="@drawable/ic_gym"
+        tools:layout_editor_absoluteX="5dp" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
