@@ -44,6 +44,7 @@ class FragmentMain : Fragment() {
                 binding.addWeight.error = "Podaj wartość większą od 0"
                 return@setOnClickListener
             }
+
             val bmi = calculateBmi(height, weight)
             val action = FragmentMainDirections.actionFragmentMainToFragmentResult(bmi.toString())
 
